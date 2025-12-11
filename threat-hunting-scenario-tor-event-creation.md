@@ -57,7 +57,7 @@ DeviceProcessEvents
 DeviceNetworkEvents
 | where InitiatingProcessFileName in~ ("tor.exe", "firefox.exe")
 | where RemotePort in (9001, 9030, 9040, 9050, 9051, 9150)
-| project Timestamp, DeviceName, InitiatingProcessAccountName, InitiatingProcessFileName, RemoteIP, RemotePort, RemoteUrl
+| project Timestamp, DeviceName, InitiatingProcessAccountName, InitiatingProcessFileName, RemoteIP, RemotePort
 | order by Timestamp desc
 
 DeviceFileEvents
